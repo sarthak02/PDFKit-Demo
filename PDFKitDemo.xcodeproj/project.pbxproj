@@ -27,6 +27,7 @@
 		8439E4A42700331800CB0D41 /* DrawingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439E49F2700331800CB0D41 /* DrawingGestureRecognizer.swift */; };
 		8439E4A52700331800CB0D41 /* PDFDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439E4A02700331800CB0D41 /* PDFDrawer.swift */; };
 		8439E4A62700331800CB0D41 /* UIBezierPath+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439E4A12700331800CB0D41 /* UIBezierPath+.swift */; };
+		8439E4A827004A0200CB0D41 /* PDFKit.png in Resources */ = {isa = PBXBuildFile; fileRef = 8439E4A727004A0200CB0D41 /* PDFKit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8439E49F2700331800CB0D41 /* DrawingGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingGestureRecognizer.swift; sourceTree = "<group>"; };
 		8439E4A02700331800CB0D41 /* PDFDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFDrawer.swift; sourceTree = "<group>"; };
 		8439E4A12700331800CB0D41 /* UIBezierPath+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+.swift"; sourceTree = "<group>"; };
+		8439E4A727004A0200CB0D41 /* PDFKit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFKit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				8439E4972700272400CB0D41 /* SamplePDF.pdf */,
+				8439E4A727004A0200CB0D41 /* PDFKit.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8439E4672700207700CB0D41 /* LaunchScreen.storyboard in Resources */,
+				8439E4A827004A0200CB0D41 /* PDFKit.png in Resources */,
 				8439E4982700272400CB0D41 /* SamplePDF.pdf in Resources */,
 				8439E4642700207700CB0D41 /* Assets.xcassets in Resources */,
 				8439E4622700207500CB0D41 /* Main.storyboard in Resources */,
