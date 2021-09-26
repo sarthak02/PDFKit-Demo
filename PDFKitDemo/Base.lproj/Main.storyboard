@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RFk-yV-f5Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor View Controller-->
+        <scene sceneID="BFb-mi-n7V">
+            <objects>
+                <viewController storyboardIdentifier="PDFEditorViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="adv-oQ-Egw" customClass="PDFEditorViewController" customModule="PDFKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YQh-P9-fXi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-uG-ETI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B02-Rh-1Ud" customClass="NonSelectablePDFView" customModule="PDFKitDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-d7-eTF">
+                                <rect key="frame" x="353" y="104" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="82J-bm-sGU"/>
+                                    <constraint firstAttribute="height" constant="45" id="bnx-Ve-a1G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil"/>
+                                <connections>
+                                    <action selector="editButtonClickedWithSender:" destination="adv-oQ-Egw" eventType="touchUpInside" id="f0v-0f-G4Q"/>
+                                </connections>
+                            </button>
+                            <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5C-JE-pvA" userLabel="DrawingMenu" customClass="SKDrawingView" customModule="PDFKitDemo" customModuleProvider="target">
+                                <rect key="frame" x="334" y="322" width="64" height="500"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="UhD-yK-9W3"/>
+                                    <constraint firstAttribute="height" constant="500" id="sNQ-dm-eHP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0F2-AN-JlD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0F2-AN-JlD" firstAttribute="bottom" secondItem="G5C-JE-pvA" secondAttribute="bottom" constant="40" id="3sr-O3-xeY"/>
+                            <constraint firstItem="KlC-d7-eTF" firstAttribute="top" secondItem="0F2-AN-JlD" secondAttribute="top" constant="16" id="4Pt-7R-X0m"/>
+                            <constraint firstAttribute="bottom" secondItem="tpd-uG-ETI" secondAttribute="bottom" id="5GI-x9-pmu"/>
+                            <constraint firstItem="tpd-uG-ETI" firstAttribute="leading" secondItem="YQh-P9-fXi" secondAttribute="leading" id="81G-Gc-74h"/>
+                            <constraint firstItem="0F2-AN-JlD" firstAttribute="trailing" secondItem="G5C-JE-pvA" secondAttribute="trailing" constant="16" id="BVI-Y5-rff"/>
+                            <constraint firstAttribute="bottom" secondItem="B02-Rh-1Ud" secondAttribute="bottom" id="BYH-eW-2GC"/>
+                            <constraint firstItem="B02-Rh-1Ud" firstAttribute="top" secondItem="0F2-AN-JlD" secondAttribute="top" id="CRo-pv-M05"/>
+                            <constraint firstItem="0F2-AN-JlD" firstAttribute="trailing" secondItem="B02-Rh-1Ud" secondAttribute="trailing" id="Cqz-7t-y4J"/>
+                            <constraint firstAttribute="trailing" secondItem="tpd-uG-ETI" secondAttribute="trailing" id="QxH-8J-8VW"/>
+                            <constraint firstAttribute="leading" secondItem="0F2-AN-JlD" secondAttribute="leading" id="Z2d-ME-DeH"/>
+                            <constraint firstItem="B02-Rh-1Ud" firstAttribute="leading" secondItem="0F2-AN-JlD" secondAttribute="leading" id="otA-4L-apX"/>
+                            <constraint firstItem="tpd-uG-ETI" firstAttribute="top" secondItem="YQh-P9-fXi" secondAttribute="top" id="siX-xA-Pm1"/>
+                            <constraint firstItem="B02-Rh-1Ud" firstAttribute="leading" secondItem="YQh-P9-fXi" secondAttribute="leading" id="ula-gp-0mG"/>
+                            <constraint firstItem="0F2-AN-JlD" firstAttribute="trailing" secondItem="KlC-d7-eTF" secondAttribute="trailing" constant="16" id="zFL-p7-Ibf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="czn-Oc-IwD"/>
+                    <connections>
+                        <outlet property="drawingMenuView" destination="G5C-JE-pvA" id="YPJ-a6-8MZ"/>
+                        <outlet property="editButton" destination="KlC-d7-eTF" id="e2a-5x-UrU"/>
+                        <outlet property="pdfView" destination="B02-Rh-1Ud" id="Lfw-TY-Nkw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pK9-c8-nTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="-50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wWT-13-wEx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RFk-yV-f5Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nOH-bC-fWW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="adv-oQ-Egw" kind="relationship" relationship="rootViewController" id="eKL-Je-Bbc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gf-pL-Jd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="-50.223214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1242" height="2688"/>
+        <image name="pencil" width="31" height="31"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
